@@ -14,8 +14,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myLabel: UILabel!
     
+    @IBOutlet weak var topTextField: UITextField!
+    
+    @IBOutlet weak var bottomTextField: UITextField!
+    
     @IBAction func tappedButton(_ sender: Any) {
-        buttonCount = buttonCount + 1
+        buttonCount += 1
+        
+        print(buttonCount)
+        
         if buttonCount >= 10 {
             view.backgroundColor = UIColor.red
             myLabel.text = "You hit the button more than 10 times"
