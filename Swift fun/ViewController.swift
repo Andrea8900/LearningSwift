@@ -18,11 +18,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var bottomTextField: UITextField!
     
+    @IBOutlet weak var addSwitch: UISwitch!
     @IBAction func tappedButton(_ sender: Any) {
         
-        let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
-    
-        myLabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
+        let addition = addSwitch.isOn
+        
+        if addition { let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+            
+            myLabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
+            
+        } else
+        { let sum = Double(topTextField.text!)! - Double(bottomTextField.text!)!
+            
+            myLabel.text = "\(topTextField.text!) - \(bottomTextField.text!) = \(sum)"
+            
+        }
+        
+        
         
     }
     
