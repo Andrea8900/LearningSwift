@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var buttonCount = 0
+    //var buttonCount = 0
     
     @IBOutlet weak var myLabel: UILabel!
     
@@ -19,6 +19,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomTextField: UITextField!
     
     @IBAction func tappedButton(_ sender: Any) {
+        
+        let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+    
+        myLabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
+        
+    }
+    
+    /*{
         buttonCount += 1
         
         print(buttonCount)
@@ -35,7 +43,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
